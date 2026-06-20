@@ -1,0 +1,47 @@
+import React from 'react';
+import ReactDOM from "react-dom/client";
+import Header from "./components/Header";
+import Body from './components/Body';
+
+
+
+// const parent = React.createElement("div", { id: "parent" }, [
+//     React.createElement("div", { id: "child1", key: "child1" }, [
+//       React.createElement("h1", { key: "h1-1" }, "hii i am h1 tag"),
+//       React.createElement("h2", { key: "h2-1" }, "hii i am h2 tags"),
+//     ]),
+  
+//     React.createElement("div", { id: "child2", key: "child2" }, [
+//       React.createElement("h1", { key: "h1-2" }, "Hii i am h1 tags"),
+//       React.createElement("h2", { key: "h2-2" }, "hii i am h2 tags"),
+//     ]),
+//   ]);
+
+
+//    const jsxheadng = <h1 id="heading"> i am jsx </h1>;
+
+
+//    const headingComponent = ()=>{
+//     return <h1>Function component - a javascript function which return some jsx code callded functional component</h1>
+//    }
+
+
+
+
+
+
+const AppLayout =() =>{
+ return(
+    <div className='app'>
+        <Header/>
+        <Body/>
+    </div>
+ )
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+   root.render(<AppLayout/>);
+
+
+

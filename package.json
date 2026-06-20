@@ -1,0 +1,22 @@
+{
+  "name": "React-Project",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "Anadil"
+  ],
+  "license": "ISC",
+  "author": "Anadil",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "browerlist":"last 2 version"
+}
