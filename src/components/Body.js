@@ -1,39 +1,59 @@
-import React from 'react';
-import ReactDOM from "react-dom/client";
-import { restaurantList } from "../utils/mockData";
-import RestronantCard from './RestronantCard';
+import { useState, useEffect} from "react";
+import { restaurantList as resData } from "../utils/mockData";
+import RestronantCard from "./RestronantCard";
+
+const Body = () => {
+  const [listOfRestaurants, setListOfRestaurants] = useState(resData);
 
 
 
+  useEffect(()=>{
+   fetchData();
+  },[]);
 
-const Body =()=>{
-    // State variable - super powerful variable
-    // A hook is a normal javascript function which is given by react , in this react give some super power  
-    // these all are known as React hooks
+  const fetchData = async ()=>{
+    const data = await fetch(
+      "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=30.32750&lng=78.03250&carousel=true&third_party_vendor=1"
+    );
+   const json  = await data.json();
+  
+   const restaurants =
+   json?.data?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+ console.log(restaurants);
+
+ setListOfRestaurants(restaurants);
+   
+  }
+
+  return (
+    <div className="body">
+      <div className="filter">
+        <button
+          className="filter-btn"
+          onClick={() => {
+            const filteredList = resData.filter(
+              (res) => res.rating > 4
+            );
 
 
-    return(
-        <div className='body'>
-            <div className='filter'>
-              <button className='filter-btn' onClick={()=>{
-                let restaurantList = restaurantList.filter((res)=> res.rating > 4);
-              }}>Top Rated ⭐ Restronant</button>
-            </div>
-            <div className='res-container'>
-               
-               {
-                restaurantList.map((restaurant)=> (
-                    <RestronantCard
-                     key={restaurant.id}
-                     data={restaurant}
-                    />
-                ))
-               }
-               
-            </div>
+            setListOfRestaurants(filteredList);
+          }}
+        >
+          Top Rated ⭐ Restaurant
+        </button>
+      </div>
 
-        </div>
-    )
-}
+      <div className="res-container">
+        {listOfRestaurants.map((restaurant) => (
+          <RestronantCard
+            key={restaurant.id}
+            data={restaurant}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Body;

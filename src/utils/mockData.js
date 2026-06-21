@@ -15,7 +15,7 @@
       rating: 4.4,
       costForTwo: "₹500 FOR TWO",
       deliveryTime: "29 mins",
-      image: "https://images.unsplash.com/photo-1563379091339-03246963d96c"
+      image: "https://b.zmtcdn.com/data/pictures/chains/1/50691/ecfdc75d21bd7cd9d880f05c8382bc65.jpg"
     },
     {
       id: "3",
@@ -30,7 +30,7 @@
       id: "4",
       name: "Call Me Chow",
       cuisines: ["Chinese", "Pan Asian"],
-      rating: 4.3,
+      rating: 3.9,
       costForTwo: "₹400 FOR TWO",
       deliveryTime: "28 mins",
       image: "https://images.unsplash.com/photo-1512058564366-18510be2db19"
@@ -75,7 +75,7 @@
       id: "9",
       name: "Biryani Blues",
       cuisines: ["Biryani", "Mughlai"],
-      rating: 4.5,
+      rating: 3.8,
       costForTwo: "₹500 FOR TWO",
       deliveryTime: "26 mins",
       image: "https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a"
@@ -186,7 +186,7 @@
       rating: 4.3,
       costForTwo: "₹450 FOR TWO",
       deliveryTime: "24 mins",
-      image: "https://picsum.photos/300/200?random=21"
+      image: "https://bikanervala.com/cdn/shop/files/Khoya_Burfi.jpg?v=1764935374&width=1600"
     },
     {
       id: "22",
