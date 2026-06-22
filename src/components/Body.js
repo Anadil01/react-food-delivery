@@ -4,31 +4,38 @@ import RestronantCard from "./RestronantCard";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState(resData);
+  const [searchText , setSearchText] = useState("");
 
 
 
-  useEffect(()=>{
-   fetchData();
-  },[]);
 
-  const fetchData = async ()=>{
-    const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=30.32750&lng=78.03250&carousel=true&third_party_vendor=1"
-    );
-   const json  = await data.json();
+//   useEffect(()=>{
+//    fetchData();
+//   },[]);
+
+//   const fetchData = async ()=>{
+//     const data = await fetch(
+//       "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=30.32750&lng=78.03250&carousel=true&third_party_vendor=1"
+//     );
+//    const json  = await data.json();
   
-   const restaurants =
-   json?.data?.cards?.[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+//    json
 
- console.log(restaurants);
+//  console.log(restaurants);
 
- setListOfRestaurants(restaurants);
+//  setListOfRestaurants(restaurants);
    
-  }
+//   }
 
   return (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input type="text" placeholder="Search here" className="search-box" value={searchText} onChange={()=> setSearchText(e.target.value)}/>
+          <button onClick={()=>{
+            console.log(searchText);
+          }}>Search</button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
