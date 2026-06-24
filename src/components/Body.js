@@ -3,37 +3,32 @@ import { restaurantList as resData } from "../utils/mockData";
 import RestronantCard from "./RestronantCard";
 
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(resData);
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
   const [searchText , setSearchText] = useState("");
 
 
+  // Whenever the state variable updates react trigger the reconcilation cycle - it will rerender the component
 
 
-//   useEffect(()=>{
-//    fetchData();
-//   },[]);
 
-//   const fetchData = async ()=>{
-//     const data = await fetch(
-//       "https://corsproxy.io/?https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=30.32750&lng=78.03250&carousel=true&third_party_vendor=1"
-//     );
-//    const json  = await data.json();
-  
-//    json
 
-//  console.log(restaurants);
+  useEffect(()=>{
+   setListOfRestaurants(resData);
+  },[]);
 
-//  setListOfRestaurants(restaurants);
-   
-//   }
+console.log("body component");
 
   return (
     <div className="body">
       <div className="filter">
         <div className="search">
-          <input type="text" placeholder="Search here" className="search-box" value={searchText} onChange={()=> setSearchText(e.target.value)}/>
+          <input type="text" placeholder="Search here" className="search-box" value={searchText} onChange={(e)=> setSearchText(e.target.value)}/>
           <button onClick={()=>{
             console.log(searchText);
+            const filterRestro = resData.filter((res)=> res.name.toLowerCase().includes(searchText.toLowerCase()));
+           
+            setListOfRestaurants(filterRestro);
+            
           }}>Search</button>
         </div>
         <button
@@ -49,14 +44,21 @@ const Body = () => {
         >
           Top Rated ⭐ Restaurant
         </button>
+        <button className="reset-btn" onClick={()=>{
+          setListOfRestaurants(resData);
+        }}>Reset</button>
       </div>
 
       <div className="res-container">
-        {listOfRestaurants.map((restaurant) => (
+       { listOfRestaurants.length ===0 ? (
+        <h2>No Restaurants Found 😔</h2>
+       ):
+        listOfRestaurants.map((restaurant) => (
           <RestronantCard
             key={restaurant.id}
             data={restaurant}
           />
+        
         ))}
       </div>
     </div>
