@@ -6,6 +6,23 @@
       rating: 4.1,
       costForTwo: "₹400 FOR TWO",
       deliveryTime: "35 mins",
+      menu: [
+        {
+          id: "1-1",
+          name: "Zinger Burger",
+          price: 199,
+        },
+        {
+          id: "1-2",
+          name: "Chicken Bucket",
+          price: 499,
+        },
+        {
+          id: "1-3",
+          name: "French Fries",
+          price: 129,
+        }
+      ],
       image: "https://images.unsplash.com/photo-1513104890138-7c749659a591"
     },
     {
@@ -15,6 +32,23 @@
       rating: 4.4,
       costForTwo: "₹500 FOR TWO",
       deliveryTime: "29 mins",
+      menu: [
+        {
+          id: "1-1",
+          name: "Zinger Burger",
+          price: 199,
+        },
+        {
+          id: "1-2",
+          name: "Chicken Bucket",
+          price: 499,
+        },
+        {
+          id: "1-3",
+          name: "French Fries",
+          price: 129,
+        }
+      ],
       image: "https://b.zmtcdn.com/data/pictures/chains/1/50691/ecfdc75d21bd7cd9d880f05c8382bc65.jpg"
     },
     {
@@ -24,6 +58,23 @@
       rating: 3.8,
       costForTwo: "₹300 FOR TWO",
       deliveryTime: "31 mins",
+      menu: [
+        {
+          id: "1-1",
+          name: "Zinger Burger",
+          price: 199,
+        },
+        {
+          id: "1-2",
+          name: "Chicken Bucket",
+          price: 499,
+        },
+        {
+          id: "1-3",
+          name: "French Fries",
+          price: 129,
+        }
+      ],
       image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0"
     },
     {

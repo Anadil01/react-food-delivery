@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 
 
 
-const RestronantCard =({data})=>{
+const RestaurantCard =({data})=>{
     const {name,
         cuisines,
         rating,
@@ -22,4 +22,4 @@ const RestronantCard =({data})=>{
     )
 };
 
-export default RestronantCard;
+export default RestaurantCard;

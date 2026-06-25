@@ -1,6 +1,7 @@
 import { useState, useEffect} from "react";
 import { restaurantList as resData } from "../utils/mockData";
-import RestronantCard from "./RestronantCard";
+import RestaurantCard from "./RestaurantCard";
+import {Link} from "react-router-dom";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -8,8 +9,6 @@ const Body = () => {
 
 
   // Whenever the state variable updates react trigger the reconcilation cycle - it will rerender the component
-
-
 
 
   useEffect(()=>{
@@ -54,10 +53,15 @@ console.log("body component");
         <h2>No Restaurants Found 😔</h2>
        ):
         listOfRestaurants.map((restaurant) => (
-          <RestronantCard
-            key={restaurant.id}
+          <Link 
+          key={restaurant.id}
+          to={"/restaurant/" + restaurant.id}
+          >
+          <RestaurantCard
+          
             data={restaurant}
           />
+          </Link>
         
         ))}
       </div>

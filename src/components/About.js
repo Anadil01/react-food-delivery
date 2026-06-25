@@ -1,7 +1,11 @@
+import {User} from "./User";
+
+
 export const About = ()=>{
     return(
-        <div>
-            <h1>About page</h1>
+        <div className="User-card">
+            <h1>About Us</h1>
+            <User/>
         </div>
     )
 }
