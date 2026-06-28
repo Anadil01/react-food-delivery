@@ -2,6 +2,7 @@ import { useState, useEffect} from "react";
 import { restaurantList as resData } from "../utils/mockData";
 import RestaurantCard from "./RestaurantCard";
 import {Link} from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -16,6 +17,12 @@ const Body = () => {
   },[]);
 
 console.log("body component");
+
+const onlineStatus = useOnlineStatus();
+
+if(onlineStatus=== false){
+  return<h1>Looks like you are offline!! please check your connection</h1>
+}
 
   return (
     <div className="body">

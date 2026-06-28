@@ -10,6 +10,8 @@ const RestaurantCard =({data})=>{
         costForTwo,
         deliveryTime,
         image,} = data;
+
+        
     return(
      <div className='restro-card' style={{margin:"3px", backgroundColor:"lightgrey" , padding:"10px"}}>
         <img src={image} className='res-logo' alt='res-image'></img>
