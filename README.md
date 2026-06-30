@@ -19,3 +19,11 @@ these all are known as React hooks
 
 
 state - wehenever react state variable update react rerender the component
+
+
+Higher Order components :- Higher order component is a function that takes a component and return  a component it means enhanced component.
+
+
+Controll and uncontroll component :-
+
+Lifing state :- 

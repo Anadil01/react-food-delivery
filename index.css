@@ -1,3 +1,7 @@
+@import "tailwindcss";
+
+
+
 .header{
     display: flex;
     justify-content: space-between;
@@ -23,7 +27,7 @@
     
 }
 .restro-card:hover{
- border: 1px solid black;
+ border: 1px solid black
 }
 .res-logo{
     width: 200px;
@@ -34,8 +38,7 @@
     flex-wrap: wrap;
 }
 .filter-btn{
-    padding: 8px;
-    margin: 4px;
+    
     cursor: pointer;
     
 }
@@ -56,4 +59,21 @@
     font-size: 1rem;
     padding: 10px;
     margin-right: 6px;
+}
+.reset-btn{
+
+    cursor: pointer;
+
+}
+
+
+.promoted-label{
+    
+    
+    background:black;
+    color:white;
+    padding:5px 10px;
+    border-radius:5px;
+    font-size:14px;
+    font-weight:bold;
 }

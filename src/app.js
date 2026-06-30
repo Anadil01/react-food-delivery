@@ -6,7 +6,7 @@ import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Error } from './components/Error';
 import { RestaurantMenu } from './components/RestaurantMenu';
-import {Grocery} from "./components/Grocery";
+// import {Grocery} from "./components/Grocery";
 import { createBrowserRouter , RouterProvider , Outlet} from 'react-router-dom';
 
 
@@ -30,6 +30,14 @@ import { createBrowserRouter , RouterProvider , Outlet} from 'react-router-dom';
 //    const headingComponent = ()=>{
 //     return <h1>Function component - a javascript function which return some jsx code callded functional component</h1>
 //    }
+
+
+// const Grocery = lazy(()=>import("./components/Grocery")); // this is called lazy and ondemand loading it improve performance
+//Chunking
+//code spliting
+//dynamic bundling
+//lazy loading
+// onDemand loading
 
 const AppLayout =() =>{
  return(
@@ -65,10 +73,10 @@ const appRouter = createBrowserRouter([
             path:"/restaurant/:id",
             element:<RestaurantMenu/>
          },
-         {
-            path:"/grocery",
-            element:<Grocery/>
-         }
+         // {
+         //    path:"/grocery",
+         //    element:<Grocery/>
+         // }
       ],
       errorElement:<Error/>
    },
