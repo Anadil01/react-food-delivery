@@ -25,7 +25,7 @@ export const RestaurantMenu = ()=>{
       key={category.title}
       data={category} 
       showItems={index=== showIndex}
-      setShowIndex={()=> setShowIndex(index)}
+      setShowIndex={()=> setShowIndex(showIndex === index ? null : index)}
       />
      ))}
     </div>
