@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from "react-dom/client";
-import { useState } from 'react';
+import { useState , useContext } from 'react';
 import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import { Grocery } from './Grocery';
+import UserContext from "../utils/UserContext";
+
+
+
 
 
 const Header = ()=>{
+    const {loggedInUser} = useContext(UserContext);
+   
     const [btn , setBtn] = useState("Login");
 
     const onlineStatus = useOnlineStatus();
@@ -23,6 +29,7 @@ const Header = ()=>{
                     <li><Link  to="/about">About us</Link> </li>
                     <li><Link to="/contact">Contact us</Link></li>
                     <li>Card</li>
+                    <li>{loggedInUser}</li>
                     <button className='btn' onClick={()=>{
                        btn === "Login" ?  setBtn("Logout") : setBtn("Login");
                     }}>{btn}</button>

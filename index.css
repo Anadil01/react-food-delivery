@@ -77,3 +77,81 @@
     font-size:14px;
     font-weight:bold;
 }
+
+/* Restaurant Menu */
+
+.menu {
+    width: 60%;
+    margin: 30px auto;
+  }
+  
+  .menu h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .menu p {
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  /* Category */
+  
+  .menu-category {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Accordion Header */
+  
+  .category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    background: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s;
+  }
+  
+  .category-header:hover {
+    background: #f5f5f5;
+  }
+  
+  .category-header span {
+    font-size: 20px;
+  }
+  
+  /* Accordion Body */
+  
+  .category-items {
+    background: #fafafa;
+  }
+  
+  /* Menu Item */
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .menu-item:hover {
+    background: #f7f7f7;
+  }
+  
+  .menu-item span:first-child {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .menu-item span:last-child {
+    color: green;
+    font-weight: bold;
+  }
